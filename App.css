@@ -1,0 +1,47 @@
+:root {
+  --sidebar-width: 240px;
+}
+
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: "Helvetica Neue", sans-serif;
+  background-color: white;
+  overflow: hidden;
+}
+
+.app-layout {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.main-content {
+  flex: 1;
+  margin-left: var(--sidebar-width);
+  height: 100%;
+  overflow-y: auto;
+  transition: margin-left 0.3s ease;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.main-content.sidebar-hidden {
+  margin-left: 0;
+}
+
+.toggle-btn {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 9999;
+  font-size: 1.4rem;
+  background: #00aaff;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  cursor: pointer;
+}
