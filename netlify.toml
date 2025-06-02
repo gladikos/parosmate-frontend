@@ -1,0 +1,8 @@
+[build]
+  command = "npm run build"
+  publish = "build"
+
+[[redirects]]
+  from = "/api/*"
+  to = "https://parosmate-backend.onrender.com/api/:splat"
+  status = 200
